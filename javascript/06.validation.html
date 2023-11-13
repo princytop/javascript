@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pex{
+        color: red;
+    }
+    .patel:hover{
+      
+        background-color: blanchedalmond;
+    }
+    .doremon:hover{
+        color: yellowgreen;
+    }
+
+</style>
+
+<body>
+    <form onsubmit="return myvalidation()">
+        <div >
+            <div>
+                <label for="username" class="doremon">username</label>
+                <input type="text" id="princy" class="patel">
+            </div>
+            <div>
+                <div colspan="3" class="op-princy">
+                    <p id="up" class="pex"></p>
+                </div>
+            </div>
+            <div  >
+                <label for="password">password</label>
+                <input type="text" id="idbye" class="patel">
+            </div>
+            <div>
+                <div colspan="3" class="op-princy">
+                    <p id="pin" class="pex"></p>
+                </div>
+            </div>
+            <div >
+               <div> <label for="Enter-details">Enter-details</label></div>
+                <textarea name="" id="tex" cols="50" rows="5" class="patel" placeholder="send your detail"></textarea>
+            </div>
+            <div>
+                <div colspan="3" class="op-princy">
+                    <p id="int" class="pex"></p>
+                </div>
+            </div>
+            <div >
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </form>
+    <script>
+
+        let username=document.getElementById("princy")
+        let idbye=document.getElementById("idbye")
+        let tex = document.getElementById("tex")
+
+        let up=document.getElementById("up")
+        let pin=document.getElementById("pin")
+        let int=document.getElementById("int")
+
+       function myvalidation(){
+
+        console.log("myvalidation");
+        console.log("idbye");
+        console.log("idbye.value.length");
+        console.log("tax");
+
+        if (username.value === "") {
+            up.innerHTML ="enter your name "
+            event.preventDefault()
+            
+        }
+        else{
+            up.innerHTML =""
+        }
+
+        if (idbye.value ==="") {
+            pin.innerHTML="enter ypur password"
+            event.preventDefault()
+        }
+        else{
+            pin.value=""
+        }
+
+        if (tex.value ==="") {
+            int.innerHTML ="enter your details"
+            event.preventDefault()
+            
+        }
+        else{
+            int.innerHTML =""
+        }
+          
+       }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .key {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <form onsubmit="return myvalidation()">
+        <div>
+            <div>
+                <label for="username">username</label>
+                <input type="text" name="" id="par" class="as">
+            </div>
+            <div>
+                <p class="key" id="kuch"></p>
+            </div>
+
+            <div>
+                <label for="password">password</label>
+                <input type="text" id="pass" class="pri">
+            </div>
+            <div>
+                <p id="roc" class="key"></p>
+            </div>
+            <div>
+                <div> <label for="Enter-details">Enter-details</label></div>
+                <textarea name="" id="kachro" class="seth" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <p id="fast" class="key"></p>
+            </div>
+
+            <div><input type="submit" value="submit"></div>
+
+        </div>
+    </form>
+
+    <script>
+
+        let par = document.getElementById("par")
+        let pass = document.getElementById("pass")
+        let kachro = document.getElementById("kachro")
+
+        let kuch = document.getElementById("kuch")
+        let roc = document.getElementById("roc")
+        let fast = document.getElementById("fast")
+        function myvalidation() {
+
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            console.log("myvalidation");
+            console.log("par");
+            console.log("pass");
+            console.log("pass.value.length");
+            console.log("kachro");
+
+            if (par.value === "") {
+                kuch.innerHTML = "enter your name "
+                event.preventDefault()
+            }
+            else {
+                kuch.innerHTML = ""
+            }
+
+            if (pass.value === "") {
+                roc.innerHTML = "fill up detalis"
+
+                event.preventDefault()
+
+            }
+            else {
+                roc.innerHTML = ""
+            }
+
+            if (kachro.value === "") {
+                fast.innerHTML = "fill up karo ne pela detalis"
+                event.preventDefault()
+
+            }
+            else {
+                fast.innerHTML = ""
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

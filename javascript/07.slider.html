@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 1000px;
+            height: 500px;
+            margin: 20px auto;
+            position: relative;
+            box-shadow: 0 0  50px rgb(12, 12, 12);
+            overflow: hidden;
+        }
+        .img{
+           width: 100%;
+           position: absolute;
+        }
+        .box{
+           text-align: center;
+           
+        }
+        .box button{
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <img src="../css/my task/img/dog-.jpg" alt="" class="img">
+        <img src="../css/my task/img/sky 1.jpg" alt="" class="img">
+        <img src="../css/my task/img/sky 8.jpeg" alt="" class="img">
+        <img src="../css/my task/img/w2.jpg" alt="" class="img">
+        <img src="../css/my task/img/weather.avif" alt="" class="img">
+        <img src="../css/my task/img/sky 3.webp" alt="" class="img">
+        <img src="../css/my task/img/sky 6.avif" alt="" class="img">
+        <img src="../css/my task/img/w1.jpeg" alt="" class="img">
+        <img src="../css/my task/img/w5.png" alt="" class="img">
+        
+    </section>
+    <div class="box"> 
+        <button onclick="goPrew()">Prew</button>
+        <button onclick="goNext()">Next</button>
+       
+    </div>
+
+    <script>
+        const slide = document.querySelectorAll(`.img`);
+         console.log(slide);
+        let count=0
+    
+        slide.forEach(
+            (img, index) => {
+                console.log(img , index);
+                img.style.left = `${ index * 100}%`
+            
+        });
+
+
+        function slideimg(){
+            slide.forEach(
+            (img) => {
+                console.log(img);
+                img.style.transform = `translateX(${-count * 100}%)`
+            
+        });
+
+        }
+
+        goPrew = () => {
+            console.log("goPrew");
+            slideimg()
+            count--
+        }
+
+        goNext = () => {
+            console.log("goNext");
+            slideimg()
+            count++
+        }
+
+     
+
+
+
+    </script>
+
+</body>
+</html>
+
+

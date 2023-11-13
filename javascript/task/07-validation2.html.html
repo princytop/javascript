@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .op-princy{
+        color: red;
+    }
+
+    input.princy{
+        width: 700px;
+    }
+
+    textarea.princyy{
+        width: 700px;
+    }
+</style>
+
+<body>
+
+
+    <div>
+        <form onsubmit="return validation()">
+            <table border="1" width="50%" align="center">
+                <tr>
+                    <td><label for="username">username</label></td>
+                    <td><input type="text" id="username" class="princy"></td>
+
+                </tr>
+                <tr>
+                    <td colspan="3" class="op-princy">
+                        <p id="usernameer"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="Password">Password</label></td>
+                    <td><input type="password" id="Password" class="princy"></td>
+
+
+                </tr>
+                <tr>
+                    <td colspan="3" class="op-princy" >
+                        <p id="passer"></p>
+                    </td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td><label for="hobbies" >hobbies</label></td>
+                    <td>
+                        swiming <input type="radio" name="hobbies" id="pass">
+                        crafting <input type="radio" name="hobbies" id="">
+                        singing<input type="radio" name="hobbies" id="">
+                    </td>
+                </tr>
+
+               
+
+
+                <tr>
+                    <td><label for="Enter-details">Enter-details</label></td>
+                    <td>
+                        <textarea name="" id="textarea" cols="5" rows="5" class="princyy" placeholder="send your detail"></textarea>
+                    </td>
+                </tr>
+                <tr><td colspan="3" class="op-princy"><p id="princy"></p></td></tr>
+                <tr>
+
+                <tr>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById("username")
+        let password = document.getElementById("Password")
+        let textarea = document.getElementById("textarea")
+     
+        let usernameer = document.getElementById("usernameer")
+        let passer = document.getElementById("passer")
+        let princy = document.getElementById("princy")
+       
+        // let count = 1
+
+        function validation() {
+        
+
+            console.log("myvalidation");
+            console.log(username.value);
+            console.log(password.value);
+            console.log(password.value.length);
+            console.log(textarea.value);
+
+        
+    
+
+
+
+            if (username.value === "") {
+                usernameer.innerHTML = "enter your name"
+                // count = 0
+                event.preventDefault()
+            }
+            else {
+                usernameer.innerHTML = ""
+                // count = 1
+            }
+            if (password.value === "") {
+                passer.innerHTML = "enter your password"
+                // count = 0
+                event.preventDefault()
+            }
+            else {
+                passer.innerHTML = ""
+                // count = 1
+            }
+
+
+
+            if (textarea.value === "") {
+                princy.innerHTML = "enter your details"
+                // count = 0
+                event.preventDefault()
+            }
+            else {
+                princy.innerHTML = ""
+                // count = 1
+            }
+
+       
+            return false
+
+            // if (count) {
+            //     return true
+            // }
+            // else {
+            //     return false
+            // }
+        }
+
+    </script>
+
+</body>
+
+</html>
